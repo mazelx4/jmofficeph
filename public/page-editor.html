@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Editor | JM Office Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+      header h1 {
+        text-align: center;
+        margin: 0;
+      }
+      .editor-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+      .editor-sidebar,
+      .editor-main {
+        width: 48%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .editor-sidebar {
+        overflow-y: auto;
+        max-height: 500px;
+      }
+      .editor-main {
+        min-height: 500px;
+      }
+      .editor-sidebar button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        background: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .editor-sidebar button:hover {
+        background: #0056b3;
+      }
+      .editor-main h2 {
+        margin-top: 0;
+      }
+      .editor-main p {
+        margin: 0 0 10px;
+      }
+      .editor-main input[type='text'],
+      .editor-main textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .editor-main button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #28a745;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .editor-main button:hover {
+        background: #218838;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Page Editor</h1>
+      </div>
+    </header>
+
+    <main id="editor-main" class="hidden">
+      <div class="container editor-container">
+        <aside class="editor-sidebar">
+          <h2>Tools</h2>
+          <button onclick="loadContent('home')">Home</button>
+          <button onclick="loadContent('about')">About</button>
+          <button onclick="loadContent('contact')">Contact</button>
+          <button onclick="loadContent('blog')">Blog</button>
+          <button onclick="saveContent()">Save Changes</button>
+        </aside>
+
+        <section class="editor-main">
+          <h2>Edit Page Content</h2>
+          <input type="text" id="page-title" placeholder="Page Title" />
+          <textarea
+            id="page-content"
+            rows="10"
+            placeholder="Page Content"
+          ></textarea>
+          <button onclick="applyChanges()">Apply Changes</button>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 JM Office Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simulate authentication state (replace with real authentication check)
+      const isAuthenticated = false; // Update this to reflect actual authentication status
+
+      if (isAuthenticated) {
+        document.getElementById('editor-main').classList.remove('hidden');
+      } else {
+        document.getElementById('editor-main').innerHTML =
+          '<h2>Access Denied</h2><p>You must be logged in to access this page.</p>';
+      }
+
+      function loadContent(page) {
+        const content = {
+          home: {
+            title: 'Welcome to Your New Office Solutions',
+            text: 'Our software is designed to streamline your office tasks and boost productivity, offering both free and premium solutions.',
+          },
+          about: {
+            title: 'About Us',
+            text: 'JM Office Solutions is dedicated to providing top-notch office software solutions with a focus on productivity and efficiency.',
+          },
+          contact: {
+            title: 'Contact Us',
+            text: 'Get in touch with us for any inquiries or support. We are here to assist you.',
+          },
+          blog: {
+            title: 'Blog',
+            text: 'Read our latest articles on office productivity, software tips, and technology trends.',
+          },
+        };
+
+        const pageData = content[page];
+        if (pageData) {
+          document.getElementById('page-title').value = pageData.title;
+          document.getElementById('page-content').value = pageData.text;
+        } else {
+          alert('Content not found');
+        }
+      }
+
+      function applyChanges() {
+        const title = document.getElementById('page-title').value;
+        const content = document.getElementById('page-content').value;
+        alert(`Changes Applied!\nTitle: ${title}\nContent: ${content}`);
+        // Implement actual saving mechanism here
+      }
+
+      function saveContent() {
+        alert('Content saved!');
+        // Implement actual saving mechanism here
+      }
+    </script>
+  </body>
+</html>

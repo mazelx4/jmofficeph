@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support - JM Office Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        .support-section {
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            margin-top: 0;
+        }
+
+        .support-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .support-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .support-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .support-form input, .support-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #dddddd;
+        }
+
+        .support-form button {
+            background: #0044cc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .support-form button:hover {
+            background: #003399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="https://i.imgur.com/1SbA9vL.jpg" alt="JM Office Solutions Logo" class="logo" />
+            <h1>JM Office Solutions</h1>
+            <p class="tagline">Empowering Office Excellence with Lifetime Solutions</p>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="support">
+            <div class="container">
+                <h2>Support</h2>
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h3>How do I install the software?</h3>
+                        <p>Follow the installation instructions provided in the user manual. If you encounter issues, please contact our support team.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the refund policy?</h3>
+                        <p>We offer a 30-day money-back guarantee on all purchases. If you're not satisfied with our product, please contact us within 30 days of purchase for a refund.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I get technical support?</h3>
+                        <p>You can reach our technical support team via the contact form on this page or by emailing support@jmofficesolutions.com.</p>
+                    </div>
+                </div>
+                <div class="support-form">
+                    <h3>Contact Support</h3>
+                    <form action="submit_support.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="issue">Issue:</label>
+                            <textarea id="issue" name="issue" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 JM Office Solutions. All rights reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

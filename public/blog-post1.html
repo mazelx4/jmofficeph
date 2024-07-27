@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Tips to Boost Office Productivity | JM Office Solutions</title>
+    <meta
+      name="description"
+      content="Discover effective strategies to enhance productivity in your office environment with tips on time management, automation, and workspace optimization."
+    />
+    <meta
+      name="keywords"
+      content="office productivity, time management, automation, workspace optimization"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      .editable {
+        border: 1px dashed #000;
+        padding: 10px;
+        margin: 10px 0;
+        position: relative;
+      }
+      .editable::after {
+        content: 'Edit';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: #ff0;
+        color: #000;
+        padding: 3px 7px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      .editable:hover::after {
+        background: #f00;
+        color: #fff;
+      }
+      .rich-editor {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+        min-height: 200px;
+      }
+      .editor-controls {
+        margin-bottom: 10px;
+      }
+      .preview {
+        border: 1px solid #ddd;
+        padding: 15px;
+        background: #f9f9f9;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <img
+          src="https://i.imgur.com/1SbA9vL.jpg"
+          alt="JM Office Solutions Logo"
+          class="logo"
+        />
+        <h1>JM Office Solutions</h1>
+        <p class="tagline">
+          Empowering Office Excellence with Lifetime Solutions
+        </p>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-post">
+        <div class="container blog-post-content">
+          <h2>5 Tips to Boost Office Productivity</h2>
+          <div class="editor-controls">
+            <button id="edit-mode" onclick="toggleEditMode()">
+              Enable Edit Mode
+            </button>
+            <button id="save-changes" onclick="saveChanges()">
+              Save Changes
+            </button>
+          </div>
+
+          <div class="rich-editor" id="editor">
+            <h3>
+              Discover effective strategies to enhance productivity in your
+              office environment.
+            </h3>
+            <p>1. Prioritize Tasks Effectively</p>
+            <p>
+              Use task management tools to prioritize your daily tasks. Tools
+              like Trello or Asana can help you track and manage your tasks
+              efficiently.
+            </p>
+
+            <p>2. Implement Time Management Techniques</p>
+            <p>
+              Techniques such as the Pomodoro Technique can enhance focus and
+              productivity. Work for 25 minutes and take a 5-minute break to
+              avoid burnout.
+            </p>
+
+            <p>3. Utilize Automation Tools</p>
+            <p>
+              Automate repetitive tasks with tools like Zapier or IFTTT. This
+              can save time and reduce errors in your daily operations.
+            </p>
+
+            <p>4. Optimize Your Workspace</p>
+            <p>
+              Ensure your workspace is ergonomically designed and free from
+              distractions. A well-organized workspace can significantly impact
+              productivity.
+            </p>
+
+            <p>5. Regularly Review and Adjust</p>
+            <p>
+              Regularly review your productivity strategies and adjust them as
+              needed. Continuous improvement can help you stay on top of your
+              game.
+            </p>
+          </div>
+
+          <div class="preview" id="preview" style="display: none">
+            <h3>Preview</h3>
+            <div id="preview-content"></div>
+          </div>
+
+          <a href="blog.html" class="cta-button">Back to Blog</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>
+          &copy; 2024 JM Office Solutions. All rights reserved.
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.16.0/ckeditor.js"></script>
+    <script>
+      let editorInstance;
+      const editorDiv = document.getElementById('editor');
+      const previewDiv = document.getElementById('preview');
+      const previewContent = document.getElementById('preview-content');
+
+      function toggleEditMode() {
+        const editButton = document.getElementById('edit-mode');
+        if (editButton.textContent === 'Enable Edit Mode') {
+          editorInstance = CKEDITOR.replace('editor');
+          editButton.textContent = 'Disable Edit Mode';
+        } else {
+          CKEDITOR.instances.editor.destroy();
+          editorButton.textContent = 'Enable Edit Mode';
+        }
+      }
+
+      function saveChanges() {
+        if (editorInstance) {
+          const editedContent = editorInstance.getData();
+          previewContent.innerHTML = editedContent;
+          previewDiv.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>

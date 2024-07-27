@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - JM Office Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      .contact-info {
+        margin-bottom: 20px;
+      }
+
+      .contact-info p {
+        margin: 0;
+      }
+
+      .contact-form {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form .form-group {
+        margin-bottom: 15px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #dddddd;
+      }
+
+      .contact-form button {
+        background: #0044cc;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .contact-form button:hover {
+        background: #003399;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <img
+          src="https://i.imgur.com/1SbA9vL.jpg"
+          alt="JM Office Solutions Logo"
+          class="logo"
+        />
+        <h1>JM Office Solutions</h1>
+        <p class="tagline">
+          Empowering Office Excellence with Lifetime Solutions
+        </p>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-info">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:jaysondrmazel@gmail.com"
+                >jaysondrmazel@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:+09606965381">0960-6965-381</a>
+            </p>
+            <p>
+              <strong>Address:</strong> 123 Office Lane, Suite 456, City,
+              Country
+            </p>
+          </div>
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="submit_contact.php" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>
+          &copy; 2024 JM Office Solutions. All rights reserved.
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

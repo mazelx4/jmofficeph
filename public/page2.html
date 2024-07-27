@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - JM Office Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      /* Custom Styles for Page 2 */
+      .tabs {
+        display: flex;
+        border-bottom: 2px solid #0044cc;
+        margin-bottom: 20px;
+      }
+
+      .tab-button {
+        background: #ffffff;
+        border: none;
+        border-bottom: 2px solid transparent;
+        color: #0044cc;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s, border-color 0.3s;
+      }
+
+      .tab-button.active {
+        background: #0044cc;
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .accordion-item {
+        margin-bottom: 10px;
+      }
+
+      .accordion-title {
+        background: #0044cc;
+        color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s;
+      }
+
+      .accordion-title:hover {
+        background: #003399;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        background: #ffffff;
+      }
+
+      .accordion-content p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <img
+          src="https://i.imgur.com/1SbA9vL.jpg"
+          alt="JM Office Solutions Logo"
+          class="logo"
+        />
+        <h1>JM Office Solutions</h1>
+        <p class="tagline">
+          Empowering Office Excellence with Lifetime Solutions
+        </p>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="tabs-section">
+        <div class="container">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="overview">
+              Overview
+            </button>
+            <button class="tab-button" data-tab="team">Our Team</button>
+            <button class="tab-button" data-tab="history">History</button>
+          </div>
+          <div class="tab-content active" id="overview">
+            <h2>Company Overview</h2>
+            <p>
+              At JM Office Solutions, we are dedicated to providing top-notch
+              office software solutions that empower productivity and streamline
+              operations. Our commitment to excellence is reflected in our
+              lifetime support and innovative features.
+            </p>
+          </div>
+          <div class="tab-content" id="team">
+            <h2>Meet the Team</h2>
+            <p>
+              Our team comprises highly skilled professionals who are passionate
+              about delivering the best solutions for our clients. From
+              developers to support staff, each member plays a crucial role in
+              our success.
+            </p>
+          </div>
+          <div class="tab-content" id="history">
+            <h2>Our History</h2>
+            <p>
+              Founded in 2024, JM Office Solutions has quickly established
+              itself as a leader in office software solutions. Our journey has
+              been marked by innovation, dedication, and a commitment to client
+              satisfaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="accordion-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="accordion-item">
+            <div class="accordion-title">
+              What sets JM Office Solutions apart?
+            </div>
+            <div class="accordion-content">
+              <p>
+                Our software is designed with a focus on lifetime support and no
+                hidden fees. We offer both free and premium versions to cater to
+                different needs.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-title">
+              How do I get started with your software?
+            </div>
+            <div class="accordion-content">
+              <p>
+                Getting started is easy. Simply download our software from the
+                download page, follow the installation instructions, and start
+                using it immediately.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-title">
+              Do you offer training or tutorials?
+            </div>
+            <div class="accordion-content">
+              <p>
+                Yes, we offer comprehensive tutorials and training materials to
+                help you get the most out of our software. Check our resources
+                page for more details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <div class="container">
+          <h2>Contact Us for More Information</h2>
+          <form action="submit_form.php" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>
+          &copy; 2024 JM Office Solutions. All rights reserved.
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const target = button.getAttribute('data-tab');
+
+            tabButtons.forEach((btn) => btn.classList.remove('active'));
+            tabContents.forEach((content) =>
+              content.classList.remove('active')
+            );
+
+            button.classList.add('active');
+            document.getElementById(target).classList.add('active');
+          });
+        });
+
+        const accordionTitles = document.querySelectorAll('.accordion-title');
+
+        accordionTitles.forEach((title) => {
+          title.addEventListener('click', () => {
+            const content = title.nextElementSibling;
+            content.style.display =
+              content.style.display === 'block' ? 'none' : 'block';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

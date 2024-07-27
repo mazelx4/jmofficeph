@@ -1,0 +1,18 @@
+{
+  "name": "jm-office-solutions",
+  "version": "1.0.0",
+  "description": "Lifetime functional software for office workers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo 'No test specified'"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "author": "Jayson R. Manio",
+  "license": "MIT"
+}

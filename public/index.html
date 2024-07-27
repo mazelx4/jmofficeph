@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JM Office Solutions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <!-- Flashing Screen Section -->
+    <div id="flashing-screen" class="flashing-screen">
+        <div class="flashing-content">
+            <h1>JM Office Solutions</h1>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <img src="https://i.imgur.com/1SbA9vL.jpg" alt="JM Office Solutions Logo" class="logo" />
+            <h1>JM Office Solutions</h1>
+            <p class="tagline">Empowering Office Excellence with Lifetime Solutions</p>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="page2.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li> <!-- Added link to Blog -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Welcome to Your New Office Solutions</h2>
+                <p>Our software is designed to streamline your office tasks and boost productivity, offering both free and premium solutions.</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container features-content">
+                <h2>Features</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3>Lifetime Software</h3>
+                        <p>Enjoy software with no subscriptions or hidden fees. One-time purchase, lifetime support.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Free & Premium Versions</h3>
+                        <p>Choose between our free tools or upgrade to premium for advanced features.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Productivity Focused</h3>
+                        <p>Designed to enhance productivity and efficiency in your daily office tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container testimonials-content">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonial-list">
+                    <div class="testimonial-item">
+                        <p>"The software has significantly improved our team's productivity. Highly recommended!"</p>
+                        <cite>- Alex T., Office Manager</cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"A game-changer for our daily operations. The support has been excellent too."</p>
+                        <cite>- Jordan L., IT Specialist</cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"We love the user-friendly interface and the fact that there are no recurring costs."</p>
+                        <cite>- Casey M., Administrative Assistant</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-showcase">
+            <div class="container product-showcase-content">
+                <h2>Our Products</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <h3>Office Efficiency Suite</h3>
+                        <p>A comprehensive suite of tools designed to enhance office efficiency. Includes task management, scheduling, and reporting features.</p>
+                    </div>
+                    <div class="product-item">
+                        <h3>Document Manager</h3>
+                        <p>Easily manage and organize your documents with our intuitive document management system. Supports a wide range of file types.</p>
+                    </div>
+                    <div class="product-item">
+                        <h3>Team Collaboration Tool</h3>
+                        <p>Facilitate seamless communication and collaboration within your team. Features real-time messaging, file sharing, and project tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container faq-content">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How can I download the software?</h3>
+                        <p>You can download our software from the download page on our website. Just follow the instructions provided.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the cost of the premium version?</h3>
+                        <p>The premium version is available for a one-time payment. For detailed pricing information, please visit our pricing page.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer customer support?</h3>
+                        <p>Yes, we offer customer support through email and our support portal. Our team is available to help you with any issues or questions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container contact-form-content">
+                <h2>Contact Us</h2>
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with the latest news and updates from JM Office Solutions. Enter your email below to subscribe.</p>
+                <form action="subscribe.php" method="POST">
+                    <div class="form-group">
+                        <label for="newsletter-email">Email:</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" required />
+                    </div>
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <div class="container social-media-content">
+                <h2>Connect with Us</h2>
+                <p>Follow us on social media for updates, tips, and more!</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="social-link">Twitter</a>
+                    <a href="https://facebook.com/yourprofile" target="_blank" class="social-link">Facebook</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 JM Office Solutions. All rights reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
